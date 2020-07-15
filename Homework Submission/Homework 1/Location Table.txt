@@ -1,0 +1,7 @@
+CREATE TABLE Location(
+	Location_Id int(4) PRIMARY KEY,
+    Street_Address VARCHAR(40),
+    Postel_Code VARCHAR(12),
+    City VARCHAR(30) NOT NULL,
+    State_Privince VARCHAR(25),
+    Country_ID VARCHAR(2));

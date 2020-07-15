@@ -1,0 +1,15 @@
+CREATE TABLE Departnments(
+    Department_Id int(6) PRIMARY KEY,
+    Department_Name VARCHAR(20) NOT NULL,
+    Manager_Id int(5),
+    Location_Id int(6));
+
+
+INSERT INTO Departnments VALUES(10,"Administration",200,1700);
+INSERT INTO Departnments VALUES(20,"Marketing",201,1800);
+INSERT INTO Departnments VALUES(50,"Shipping",124,1500);
+INSERT INTO Departnments VALUES(60,"IT",103,1400);
+INSERT INTO Departnments VALUES(80,"SAles",149,2500);
+INSERT INTO Departnments VALUES(90,"Executive",100,1700);
+INSERT INTO Departnments VALUES(110,"Accounting",205,1700);
+INSERT INTO Departnments VALUES(190,"Contracting",NULL,1700);

@@ -1,0 +1,12 @@
+CREATE TABLE Employees(
+Employee_Id int(6) PRIMARY KEY,
+First_Name VARCHAR(20),
+Last_Name VARCHAR(25) NOT NULL,
+Email VARCHAR(25) NOT NULL,
+Phone_Number VARCHAR(15),
+Hire_Date DATE NOT NULL,
+Job_Id VARCHAR(10) NOT NULL,
+Salary int(8),
+Commission_pct int(2),
+Manager_id int(6),
+Department_Id int(4));

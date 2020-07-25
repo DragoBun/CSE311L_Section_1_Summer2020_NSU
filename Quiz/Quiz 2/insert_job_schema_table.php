@@ -7,10 +7,10 @@ if($link == false)
     die("Error!! Could not connect\t" .mysqli_connect_error());
 }
 
-$sql = "INSERT INTO Job_Schema(Location_id,Street_Address,Postal_Code,City,State_Province,Country_ID)
+$sql = "INSERT INTO Job_Schema(Job_Id,Job_Title,Min_Salary,Max_Salary)
     VALUES 
-    ('AD_PRES', 'President',20000,40000),
-    ('AD_VP', 'Adminsitrative Vice President',15000,30000)";
+    ('AD_PRES','President',20000,40000),
+    ('AD_VP','Adminsitrative Vice President',15000,30000)";
 
 if(mysqli_query($link,$sql))
 {

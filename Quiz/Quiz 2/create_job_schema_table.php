@@ -7,11 +7,11 @@ if($link == false)
     die("Error!! Could not connect. " .mysqli_connect_error());
 }
 
-$sql = "CREATE TABLE location(
-    Job_Id VARCHAR2(10) NOT NULL,
-    Job_Title VARCHAR2(35) NOT NULL,
-    Min_Salary NUMBER(6),
-    Max_Salary NUMBER(6)
+$sql = "CREATE TABLE Job_Schema(
+    Job_Id VARCHAR(10) NOT NULL,
+    Job_Title VARCHAR(35) NOT NULL,
+    Min_Salary INT(6),
+    Max_Salary INT(6)
 )";
 
 if(mysqli_query($link,$sql))

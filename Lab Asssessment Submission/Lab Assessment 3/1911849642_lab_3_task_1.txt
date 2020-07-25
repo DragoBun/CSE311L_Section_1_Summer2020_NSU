@@ -1,0 +1,1 @@
+SELECT last_name, (12*4*Salary) AS 'Weekly_Salary', Department_id FROM employee

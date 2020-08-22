@@ -1,0 +1,21 @@
+SELECT AVG(Salary) AS 'AVG SALARY' , MAX(Salary) AS 'MAX SALARY', MIN(Salary) AS 'MIN SALARY', SUM(Salary) AS 'TOTAL SALARY'
+from employee
+WHERE Job_Id LIKE '%REP%'
+
+
+SELECT COUNT(DISTINCT Department_Id)
+FROM employee
+
+
+SELECT DISTINCT Department_Id
+FROM employee
+order by Department_Id
+
+
+SELECT Last_Name,Job_Id, SUM(Salary) PAYROLL
+from employee
+WHERE Job_Id NOT LIKE '%REP%'
+GROUP BY Job_Id HAVING SUM(Salary)>13000
+order by SUM(Salary)
+
+

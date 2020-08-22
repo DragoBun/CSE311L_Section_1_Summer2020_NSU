@@ -1,1 +1,25 @@
-.....
+1.
+SELECT AVG(Salary) AS 'AVG SALARY' , MAX(Salary) AS 'MAX SALARY', MIN(Salary) AS 'MIN SALARY', SUM(Salary) AS 'TOTAL SALARY'
+from employee
+WHERE Job_Id LIKE '%REP%'
+
+
+2.
+SELECT AVG(Salary) AS 'AVG SALARY' , MAX(Salary) AS 'MAX SALARY', MIN(Salary) AS 'MIN SALARY', SUM(Salary) AS 'TOTAL SALARY'
+from employee
+GROUP BY Job_Id
+
+
+3.
+SELECT COUNT(DISTINCT Job_Id)
+FROM employee
+GROUP BY Job_Id
+
+
+4.
+SELECT Manager_id, SUM(Salary) PAYROLL, MIN(Salary)
+from employee
+WHERE Job_Id NOT LIKE '%REP%'
+AND Manager_id IS NOT NULL
+GROUP BY Job_Id HAVING SUM(Salary)>6000
+order by Salary DESC

@@ -1,1 +1,26 @@
-.....
+1. 
+SELECT e.employee_id, e.last_name, d.department_id 
+FROM employee e, departnment d
+WHERE e.Department_Id = d.Department_Id
+
+
+2.
+SELECT e.employee_id, e.last_name,
+e.department_id, d.department_id, d.location_id 
+FROM employee e, departnment d
+WHERE e.Department_Id = d.Department_Id
+
+
+3.
+SELECT e.Job_Id, e.last_name, d.department_id,  d.Department_Name
+FROM employee e, departnment d
+WHERE e.Department_Id = d.Department_Id
+
+
+4.
+SELECT last_name, Salary, Commission_pct, Job_Id
+FROM employee
+WHERE Commission_pct IS NOT NULL
+ORDER BY Salary AND Commission_pct AND Job_Id DESC
+
+5.

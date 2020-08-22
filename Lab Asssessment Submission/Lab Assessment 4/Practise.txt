@@ -1,0 +1,30 @@
+SELECT Last_Name, Department_name
+Department_name from employee,departnment
+
+
+
+SELECT e.employee_id, e.last_name,
+e.department_id, d.department_id, d.location_id 
+FROM employee e, departnment d
+WHERE e.Department_Id = d.Department_Id
+
+
+SELECT concat(e.last_name, ' works for ' ,m.last_name)
+FROM employee e, employee m
+WHERE e.manager_id = m.employee_id
+
+
+SELECT concat(e.last_name, ' works for ' ,m.last_name) AS 'History'
+FROM employee e, employee m
+WHERE e.manager_id = m.employee_id
+
+
+SELECT e.last_name, e.department_id, d.department_name
+FROM employee e LEFT OUTER JOIN departnment d
+ON (e.Department_Id = d.Department_Id)
+
+
+
+SELECT e.last_name AS 'Name', e.department_id AS 'Dept ID', d.department_name AS 'Dept Name'
+FROM employee e LEFT OUTER JOIN departnment d
+ON (e.Department_Id = d.Department_Id)

@@ -23,4 +23,9 @@ FROM employee
 WHERE Commission_pct IS NOT NULL
 ORDER BY Salary AND Commission_pct AND Job_Id DESC
 
+
+sss
 5.
+SELECT e.last_name AS 'Employee', e.Employee_Id AS 'Emp#', e.Manager_id AS 'Mgr#'
+FROM employee e LEFT OUTER JOIN departnment d
+ON (e.Department_Id = d.Department_Id)

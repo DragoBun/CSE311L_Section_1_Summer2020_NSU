@@ -1,1 +1,1 @@
-SELECT last_name, (12*Salary) AS 'Weekly_Salary', Department_id FROM employee
+SELECT last_name, (Salary/4) AS 'Weekly_Salary', Department_id FROM employee

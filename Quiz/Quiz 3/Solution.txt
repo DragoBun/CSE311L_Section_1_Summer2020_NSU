@@ -1,0 +1,14 @@
+1.
+SELECT CONCAT(Last_Name, ' , ', Job_Id) AS 'Employee and Title'
+FROM employee;
+
+2.
+SELECT last_name, Salary, Commission_pct
+FROM employee
+WHERE Commission_pct IS NOT NULL
+ORDER BY Salary AND Commission_pct DESC;
+
+3.
+SELECT last_name, Salary, Hire_Date
+FROM employee
+WHERE Hire_Date LIKE '1994%'

@@ -23,3 +23,9 @@ WHERE Job_Id NOT LIKE '%REP%'
 AND Manager_id IS NOT NULL
 GROUP BY Job_Id HAVING SUM(Salary)>6000
 order by Salary DESC
+
+
+5.
+SELECT d.Department_Name AS 'Name', d.Location_Id AS 'Location', SUM(d.Department_Id) AS 'Total', AVG(e.Salary) AS 'Average Salary'
+FROM employee e LEFT OUTER JOIN departnment d
+ON (e.Department_Id = d.Department_Id)

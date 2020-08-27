@@ -1,0 +1,33 @@
+1.
+SELECT concat(first_name,' ',last_name) AS "Employee", Job_Id,AVG(Salary) AS 'AVG SALARY' , MAX(Salary) AS 'MAX SALARY', MIN(Salary) AS 'MIN SALARY', SUM(Salary) AS 'TOTAL SALARY'
+from employee
+GROUP BY Job_Id
+
+
+2.
+SELECT concat(First_Name,' ',Last_Name) AS "Employee",Manager_id, MAX(Salary) AS "Highest Paid"
+FROM employee
+WHERE Manager_id IS NOT NULL AND Salary>6000
+ORDER BY Salary DESC
+
+
+3.
+SELECT Department_Name, Location_Id AS "Location",COUNT(*) AS 'Number of People', 
+ROUND(AVG(employee.Salary),2) AS "Salary"
+FROM departnment
+INNER JOIN employee
+ON employee.Manager_id = departnment.Manager_Id
+GROUP BY Department_Name
+
+
+4.
+SELECT concat(first_name,' ',last_name) AS "Employee" , COUNT(*) AS 'Number of People with same job'
+FROM employee
+GROUP BY Job_Id
+
+
+5.
+SELECT Last_Name,Salary
+FROM employee
+WHERE Commission_pct IS NULL
+ORDER BY Salary AND Commission_pct

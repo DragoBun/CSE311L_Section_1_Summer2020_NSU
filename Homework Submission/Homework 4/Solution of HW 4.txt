@@ -30,4 +30,4 @@ GROUP BY Job_Id
 SELECT Last_Name,Salary
 FROM employee
 WHERE Commission_pct IS NULL
-ORDER BY Salary AND Commission_pct
+ORDER BY Salary AND Commission_pct DESC
